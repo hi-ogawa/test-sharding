@@ -84,3 +84,9 @@ jobs:
 
       - name: Merge reports
         run: npx vitest --merge-reports --reporter=default --reporter=html
+
+      - name: Upload merged html report
+        uses: actions/upload-artifact@v4
+        with:
+          name: html-report
+          path: html
